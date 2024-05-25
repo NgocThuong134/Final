@@ -1,0 +1,96 @@
+
+<%-include('includes/header')%>
+<%-include('includes/navbar')%>
+
+<section id="center" class="center_o pt-4 pb-4 bg-light">
+    <div class="container-xl">
+        <div class="row center_o1 text-center">
+            <div class="col-md-12">
+                <h1>PRODUCT DETAIL</h1>
+                <h6 class="d-inline-block bg-white font_14 col_yell"><a
+                        class="col_light" href="#"
+                        onclick="history.back()">Go back</a> <span
+                        class="me-2 ms-2">/</span> Product Detail</h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="detail" class="pt-4 pb-4">
+    <div class="container-xl">
+        <div class="row detail_1">
+            <div class="col-md-6">
+                <div class="detail_1l">
+                    <div id="carouselExampleCaptions" class="carousel slide"
+                        data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <% product.image.forEach((image, index)=> { %>
+                            <button type="button"
+                                data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="<%= index %>"
+                                class="<%= index === 0 ? 'active' : '' %>"
+                                aria-label="Slide <%= index + 1 %>"></button>
+                            <% }); %>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <% product.image.forEach((image, index)=> { %>
+                            <div
+                                class="carousel-item <%= index === 0 ? 'active' : '' %>">
+                                <img src="/<%= image %>"
+                                    data-magnify-src="/<%= image %>"
+                                    class="d-block d-block-custom zoom"
+                                    alt="abc">
+                            </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="detail_1r">
+                    <% if (product.stock > 0){ %>
+                    <h6
+                        class="d-inline-block bg_yell text-white font_12 ps-3 pe-3 pt-2 pb-2 rounded-1">In
+                        Stock</h6>
+                    <% }else{ %>
+                    <h6
+                        class="d-inline-block bg_red text-white font_12 ps-3 pe-3 pt-2 pb-2 rounded-1">Out
+                        of Stock</h6>
+                    <% } %>
+                    <h4 class="mt-2"><%=product.productName %></h4>
+                    <h6><strong>PRODUCT DETAILS :</strong></h6>
+                    <p style="white-space: pre-wrap;"><%=product.description
+                        %></p>
+                    <h6 class="mb-2">Stock:<%=product.stock %></h6>
+                    <input type="number" min="1" max="<%= product.stock %>"
+                        value="1" class="form-control mt-2 quantity-box-custom"
+                        id="productQuantity">
+                    <% if (product.stock> 0) { %>
+                    <% if (locals.user) { %>
+                    <h6 class="text-uppercase mt-4">
+                        <a class="button" id="addToCartBtn"
+                            data-product-id="<%= product._id %>"
+                            style="cursor: pointer;">Add to
+                            Cart</a>
+                    </h6>
+                    <% } else { %>
+                    <h6 class="text-uppercase mt-4">
+                        <a class="button" href="/login">Add to Cart</a>
+                    </h6>
+                    <% } %>
+                    <% } else { %>
+                    <h6 class="text-uppercase mt-4">
+                        <a class="button disabled"
+                            style="cursor: not-allowed; opacity: 0.5;">Add to
+                            Cart</a>
+                    </h6>
+                    <% } %>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%-include('includes/footer')%>
