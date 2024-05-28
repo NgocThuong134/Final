@@ -3,7 +3,7 @@ const dotenv = require("dotenv").config({ path: '.env' });
 
 
 
-const MONGODB_URL = 'mongodb://localhost:27017/final';
+const MONGODB_URL = 'mongodb+srv://ngocthuong:WwiNYGR3gVyVLEF3@atlascluster.dicjzo3.mongodb.net/Final';
 
 mongoose.connect(MONGODB_URL, {
     useNewUrlParser: true,
