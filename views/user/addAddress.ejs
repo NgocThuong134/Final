@@ -5,7 +5,9 @@
         <div class="row center_o1 text-center">
             <div class="col-md-12">
                 <h1>My Address</h1>
-                <h6 class="d-inline-block  font_14 col_yell bg-white"><a class="col_light" href="#" onclick="history.back()">Go back</a> <span
+                <h6 class="d-inline-block  font_14 col_yell bg-white"><a
+                        class="col_light" href="#" onclick="history.back()">Go
+                        back</a> <span
                         class="me-2 ms-2">/</span>My address</h6>
             </div>
         </div>
@@ -15,76 +17,84 @@
 <section id="address">
     <div class="container-xl">
 
-            <div class="col-md-12">
-                <div class="checkout_1l">
-                    <h5>Add delivery address</h5>
-                    <hr class="line">
+        <div class="col-md-12">
+            <div class="checkout_1l">
+                <h5>Add delivery address</h5>
+                <hr class="line">
+            </div>
+            <div class="checkout_1l1 row">
+                <div class="col-md-6 ps-0">
+                    <h6 class="font_13 fw-bold">First Name <span>*</span></h6>
+                    <input class="form-control" id="first-name" type="text">
                 </div>
-                <div class="checkout_1l1 row">
-                    <div class="col-md-6 ps-0">
-                        <h6 class="font_13 fw-bold">First Name <span>*</span></h6>
-                        <input class="form-control" id="first-name" type="text">
-                    </div>
-                    <div class="col-md-6 ps-0">
-                        <h6 class="font_13 fw-bold">Last Name <span>*</span></h6>
-                        <input class="form-control" id="last-name" type="text">
-                    </div>
-                </div>
-                <div class="checkout_1l1 row">
-                    <div class="col-md-6 ps-0">
-                        <h6 class="font_13 fw-bold">Postal Code <span>*</span></h6>
-                        <input class="form-control" id="postal-code" type="text">
-                    </div>
-                    <div class="col-md-6 ps-0">
-                        <h6 class="font_13 fw-bold">Locality<span>*</span></h6>
-                        <input class="form-control" id="locality" type="text">
-                    </div>
-                </div>
-                <div class="checkout_1l1 row">
-                    <div class="col-md-6 ps-0">
-                        <h6 class="font_13 fw-bold">Town / City / District<span>*</span></h6>
-                        <input class="form-control" id="city" type="text">
-                    </div>
-                    <div class="col-md-6 ps-0">
-                        <h6 class="font_13 fw-bold">State / Division<span>*</span></h6>
-                        <select class="form-select" id="state" name="state">
-                            <option value="" disabled selected>Select State</option>
-                            <option>Kerala</option>
-                            <option>Tamil Nadu</option>
-                            <option>Karnataka</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="checkout_1l1 row">
-                    <div class="col-md-6 ps-0">
-                        <h6 class="font_13 fw-bold">Address Line <span>*</span></h6>
-                        <input class="form-control" id="address-line" type="text">
-                    </div>
-                    <div class="col-md-6 ps-0">
-                          <h6 class="font_13 fw-bold">Land Mark <span>*</span></h6>
-                        <input class="form-control" id="landmark" type="text">
-                    </div>
-                </div>
-                <div class="checkout_1l1 row">
-                    <div class="col-md-6 ps-0">
-                        <h6 class="font_13 fw-bold">Email<span>*</span></h6>
-                        <input class="form-control" id="address-email" type="text">
-                    </div>
-                    <div class="col-md-6 ps-0">
-                        <h6 class="font_13 fw-bold">Phone number<span>*</span></h6>
-                        <input class="form-control" id="address-phone" type="text">
-                    </div>
-                </div>
-                <div class="checkout_1l1-row mt-3">
-                    <div class="text-center">
-                        <h6><a class="button_1" style="cursor: pointer;" onclick="addAddress()">Add new address</a></h6>
-                    </div>
+                <div class="col-md-6 ps-0">
+                    <h6 class="font_13 fw-bold">Last Name <span>*</span></h6>
+                    <input class="form-control" id="last-name" type="text">
                 </div>
             </div>
-        
+            <div class="checkout_1l1 row">
+                <div class="col-md-6 ps-0">
+                    <h6 class="font_13 fw-bold">Postal Code <span>*</span></h6>
+                    <input class="form-control" id="postal-code" type="text">
+                </div>
+                <div class="col-md-6 ps-0">
+                    <h6 class="font_13 fw-bold">Locality<span>*</span></h6>
+                    <input class="form-control" id="locality" type="text">
+                </div>
+            </div>
+            <div class="checkout_1l1 row">
+                <div class="col-md-6 ps-0">
+                    <h6 class="font_13 fw-bold">Town / City /
+                        District<span>*</span></h6>
+                    <input class="form-control" id="city" type="text">
+                </div>
+                <div class="col-md-6 ps-0">
+                    <h6 class="font_13 fw-bold">State /
+                        Division<span>*</span></h6>
+                    <select class="form-select" id="state" name="state">
+                        <option value="" disabled selected>Select State</option>
+                        <option>Hà Nội</option>
+                        <option>Hồ Chí Minh</option>
+                        <option>Đà Nẵng</option>
+                        <option>Hải Phòng</option>
+                        <option>Cần Thơ</option>
+                        <option>Bình Dương</option>
+                        <option>Đồng Nai</option>
+                        <option>Khánh Hòa</option>
+                        <option>Quảng Ninh</option>
+                        <option>Thừa Thiên Huế</option>
+                    </select>
+                </div>
+            </div>
+            <div class="checkout_1l1 row">
+                <div class="col-md-6 ps-0">
+                    <h6 class="font_13 fw-bold">Address Line <span>*</span></h6>
+                    <input class="form-control" id="address-line" type="text">
+                </div>
+                <div class="col-md-6 ps-0">
+                    <h6 class="font_13 fw-bold">Land Mark <span>*</span></h6>
+                    <input class="form-control" id="landmark" type="text">
+                </div>
+            </div>
+            <div class="checkout_1l1 row">
+                <div class="col-md-6 ps-0">
+                    <h6 class="font_13 fw-bold">Email<span>*</span></h6>
+                    <input class="form-control" id="address-email" type="text">
+                </div>
+                <div class="col-md-6 ps-0">
+                    <h6 class="font_13 fw-bold">Phone number<span>*</span></h6>
+                    <input class="form-control" id="address-phone" type="text">
+                </div>
+            </div>
+            <div class="checkout_1l1-row mt-3">
+                <div class="text-center">
+                    <h6><a class="button_1" style="cursor: pointer;"
+                            onclick="addAddress()">Add new address</a></h6>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
-
 <%-include('includes/footer')%>
-
